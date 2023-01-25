@@ -6,10 +6,6 @@
     - '../vars/architectures/default.yml'
   ansible.builtin.include_vars: '{{ item }}'
 
-- name: Set grallvm filename
-  ansible.builtin.set_fact:
-    graalvm_redis_filename: "graalvm-ce-java{{ graalvm_java_version }}-linux-{{ graalvm_architecture }}-{{ graalvm_version }}.tar.gz"
-
 - name: Install GraalVM
   ansible.builtin.import_tasks: graalvm.yml
 
