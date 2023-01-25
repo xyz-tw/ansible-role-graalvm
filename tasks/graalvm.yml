@@ -127,7 +127,6 @@
     path: '{{ graalvm_home }}'
     state: directory
     owner: root
-    group: root
     mode: 'u=rwx,go=rx'
 
 - name: Install unarchive module dependencies (tar, gzip, unzip)
@@ -150,5 +149,4 @@
     creates: '{{ graalvm_home }}/bin/java'
     copy: no
     owner: root
-    group: root
     mode: 'go-w'
